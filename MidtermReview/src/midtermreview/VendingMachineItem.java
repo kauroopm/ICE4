@@ -48,7 +48,7 @@ public class VendingMachineItem {
      */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Welcome to the vendin machine, here is a list of the possible candies");
+        System.out.println("Welcome to the vending machine, here is a list of the possible candies");
         for (int i = 0; i < candies.length; i++) {
             System.out.println(candies[i]);
         }
