@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> Exercise 16 - On click Event</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div> Exercise 16 - On click Event  </div> <br> 
+        <div id = "ID_1" onclick="changeLine()"> We are learning Javascript. </div>
+        <script>
+            function changeLine() {
+                document.getElementById("ID_1").innerHTML = "We are learning getElementsById.";
+            }
+        </script>
+    </body>
+</html>

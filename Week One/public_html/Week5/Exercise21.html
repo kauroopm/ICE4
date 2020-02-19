@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> Exercise 21 - Pong game canvas </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            canvas{
+                background-color:lightgoldenrodyellow;
+                border:solid 10px cadetblue;
+                margin-left:380px;
+                margin-top:30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div> Exercise 21 - Pong game canvas </div>
+        <canvas id="container" width="300" height="400"> 
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <script>
+            var canvas = document.getElementById("container");
+            var context = canvas.getContext("2d");
+            context.fillStyle = "black";
+            context.fillRect(125, 35, 50, 15);
+            context.fillText("Player A!! , Score:0 ", 15, 30);
+            context.fillRect(125, 350, 50, 15);
+            context.fillText("Player B!! , Score:0 ", 15, 380);
+        </script>
+    </body>
+</html>

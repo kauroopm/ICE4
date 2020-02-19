@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> Exercise 19 - Correct Salutation </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div> Exercise 19 - Correct Salutation </div>
+        <p > Mr. </p>
+        <p> Tom </p>
+        <p> Jones </p>
+        <button onclick="changeSalutation()"> Click to change salutation </button>
+        <p> </p>
+        <script>
+            function changeSalutation() {
+                let getname = document.getElementsByTagName("p");
+                let name = "Sir";
+                getname[3].innerText = name + " " + getname[1].innerText+ " " + getname[2].innerText;
+                document.getElementsByTagName("p")[3];
+            }
+        </script>
+    </body>
+</html>

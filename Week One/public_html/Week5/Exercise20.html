@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> Exercise 20 - Center the text on Canvas </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            canvas{
+                background-color:lightpink;
+                border:solid 6px blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div> Exercise 20 - Center the text on Canvas </div>
+        <canvas id="container" width="500" height="300"> 
+        Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <script>
+        var canvas = document.getElementById("container");
+        var context = canvas.getContext("2d");
+        context.fillStyle="Black";
+        context.font="22px Arial";
+        context.fillText("Hello World!!", 160,156);
+        </script>
+    </body>
+</html>

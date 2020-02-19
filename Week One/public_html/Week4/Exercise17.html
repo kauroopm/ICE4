@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> Exercise 17 - Change Color of lines </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div> Exercise 17 - Change Color of lines </div> <br>
+        <p id ="ID_1" onclick="changeColor()" > I should be red </p>
+        <p id ="ID_2" onclick="changeColor1()" > I should be orange </p>
+        <p id ="ID_3" onclick="changeColor2()"  > I should be yellow </p>
+        <p id ="ID_4" onclick="changeColor3()"  > I should be green </p>
+        <p id ="ID_5" onclick="changeColor4()"  > I should be blue </p>
+        <script>
+            function changeColor() {
+             document.getElementById("ID_1").style.color = "red";
+         }
+         function changeColor1(){
+             document.getElementById("ID_2").style.color = "orange";
+         }
+         function changeColor2(){
+             document.getElementById("ID_3").style.color = "yellow";
+         }
+         function changeColor3(){
+             document.getElementById("ID_4").style.color = "green";
+         }
+         function changeColor4(){
+             document.getElementById("ID_5").style.color = "blue";
+            }
+        </script>
+
+    </body>
+</html>

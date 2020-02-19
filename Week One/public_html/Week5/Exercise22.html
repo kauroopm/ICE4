@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> Exercise 22 - Draw a Star </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            canvas{
+                background-color: lightsalmon ;
+                border:solid 10px maroon;
+                margin-left:380px;
+                margin-top:30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div> Exercise 22 - Draw a Star </div>
+        <canvas id="container" width="300" height="400"> 
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <script>
+            var canvas = document.getElementById("container");
+            var context = canvas.getContext("2d");
+            context.beginPath(150, 150);
+            context.moveTo(149, 67);
+            context.lineTo(137, 104);
+            context.lineTo(99, 104);
+            context.lineTo(128 , 128);
+            context.lineTo(116 , 165);
+            context.lineTo(149 , 143);
+            context.lineTo(180 , 165);
+            context.lineTo(169 , 129);
+            context.lineTo(199 , 105);
+            context.lineTo(162 , 104);
+            context.closePath(149 , 67);
+            context.fillStyle="yellow";
+            context.fill();
+        </script>
+    </body>
+</html>

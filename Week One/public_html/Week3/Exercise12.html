@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> Exercise 12 - Function map() </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div> Exercise 12 - Function map() </div>
+        <script>
+            function captalizeTheFirstLetter(item) {
+                let letter = item.charAt(0).toUpperCase();
+                return letter + item.slice(1);
+            }
+            let fruit = ["apple", "orange", "mango", "banana"];
+            let fruitName = fruit.map(captalizeTheFirstLetter);
+            document.writeln("<pre>");
+            for (let i = 0; i < fruit.length; i++) {
+                document.writeln(fruitName[i]);
+            }
+            document.writeln("</pre>");
+        </script>
+    </body>
+</html>
