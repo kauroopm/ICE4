@@ -16,13 +16,22 @@ and open the template in the editor.
             function showDistance(speed, time) {
                 let distance = speed * time;
                 alert(distance);
-                function Roop(){
+                function Roop() {
                     alert("Ruban");
                 }
                 Roop();
             }
             let outer = showDistance(50, 2);
             outer();
+            let safeToProceed = false;
+            function isSafe() {
+                if (safeToProceed) {
+                    alert("You shall Pass!");
+                } else {
+                    alert("You shall not pass!");
+                }
+            }
+            isSafe();
         </script>
     </body>
 </html>
