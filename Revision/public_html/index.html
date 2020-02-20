@@ -13,6 +13,26 @@ and open the template in the editor.
     <body>
         <div>TODO write content</div>
         <script>
+            let fruit1 = ["apple", "mango", "orange", "banana", "pineapple"];
+            let fruitName = fruit1.map(function (item) {
+                let firstLetter = item.charAt(0).toUpperCase();
+                return firstLetter + item.slice(1);
+            });
+            for (let i = 0; i < fruit1.length; i++) {
+                document.write("<pre>")
+                document.writeln(fruitName[i]);
+                document.write("<pre>")
+            }
+
+            let fruit = ["apple", "mango", "orange", "banana", "pineapple"];
+            let roop = fruit.push("strawberry");
+            let roop3 = fruit.unshift("cookies");
+            let roop1 = fruit.pop( );
+            let roop2 = fruit.shift( );
+            alert(roop);
+            alert(roop1);
+            alert(roop2);
+            alert(roop3);
             function showDistance(speed, time) {
                 let distance = speed * time;
                 alert(distance);
@@ -32,6 +52,7 @@ and open the template in the editor.
                 }
             }
             isSafe();
+
         </script>
     </body>
 </html>
