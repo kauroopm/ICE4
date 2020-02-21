@@ -6,11 +6,29 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title> Exercise 24 - Getting the cursor position </title>
+        <title> Exercise 23 -  Canvas test to get cursor position </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            canvas{
+                background-color: lightblue;
+                border-style: solid;
+                border-width: 5px;
+                border-color: darkblue;
+            }
+        </style>
     </head>
     <body>
-        <div>  Exercise 24 - Getting the cursor position </div>
+        <div> Exercise 23 -  Canvas test to get cursor position </div>
+        <canvas id="container" onclick="locationClicked(event)" width="400" height="400"> </canvas>
+        <script>
+            function locationClicked(event) {
+                var canvas = document.getElementById("container");
+                var context = canvas.getContext("2d");
+                var x = event.pageX - canvas.offsetLeft - 10;
+                var y = event.pageY - canvas.offsetTop - 10;
+                context.fillText("(" + x + " , " + y + ")", x + 10 , y + 10);
+            }
+        </script>
     </body>
 </html>
