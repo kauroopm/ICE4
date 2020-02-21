@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> Question 2 </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div> Question 2 </div>
+        <p id="1"> We are learning JavaScript </p>
+        <p id="1"> This is Part B Quiz. </p>
+        <p id="1"> We are learning event Listener. </p>
+        <button id="2" onclick="hideContent()"> Hide Content </button>
+        <script>
+            function hideContent() {
+                document.getElementsByTagName("p")[0].innerHTML = " ";
+                document.getElementsByTagName("p")[1].innerHTML = " ";
+                document.getElementsByTagName("p")[2].innerHTML = " ";
+            }
+        </script>
+    </body>
+</html>
