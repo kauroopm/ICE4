@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+Name: Roopminder Kaur
+Student Id: 991566979
+-->
+<html>
+    <head>
+        <title> Assignment One</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div> Assignment One </div>
+        <script>
+            let a = prompt("Please write the value of a");
+            let b = prompt("Please write the value of b");
+            let c = prompt("Please write the value of c");
+
+            function Discriminant() {
+
+                let D = b * b - 4 * a * c;
+                document.writeln("<br><strong><b>Discriminant</b></strong> is equal to " + D + " . Thus ");
+                if (D < 0) {
+                    document.writeln("<b><strong>no</strong></b> real root exists.");
+                } else if (D > 0) {
+                    document.writeln("equation has <b><strong>two</strong></b> real roots.");
+                } else {
+                    document.writeln("equation has <b><strong>one</strong></b> real root.");
+                }
+                return D;
+            }
+            function realRoot(D) {
+                let x1 = (-b + Math.sqrt(D)) / (2 * a);
+                let x2 = (-b - Math.sqrt(D)) / (2 * a);
+                if (a == 1) {
+                    a = " ";
+                } else if (a == -1) {
+
+                    a = "-";
+                }
+                if (b == 1) {
+                    b = "+";
+                } else if (b == -1) {
+                    b = "-";
+                } else if (b > 0) {
+                    b = "+" + b;
+                } else if (b < 0) {
+                    b = +b;
+                }
+                if (c > 0) {
+                    c = "+" + c;
+                } else if (c < 0) {
+                    c = +c;
+                }
+                if (D < 0) {
+                    document.writeln("<br><br>The graph of Quadratic funtion f(<i>X</i>) = "
+                            + a + "<i>X<sup>2</sup></i>" + b +
+                            "<i>X</i>" + c + " = 0 does not touch the x-axis.");
+                } else if (D > 0) {
+                    document.writeln("<br><br>The graph of Quadratic funtion f(<i>X</i>) = "
+                            + a + "<i>X<sup>2</sup></i>" + b +
+                            "<i>X</i>" + c + " = 0 intersects the x-axis at points (" + x2 + ",0) and (" + x1 + ",0).");
+                } else if (D === 0) {
+                    document.writeln("<br><br>The graph of Quadratic funtion f(<i>X</i>) = "
+                            + a + "<i>X<sup>2</sup></i>" + b +
+                            "<i>X</i>" + c + " = 0 touches the x-axis at point (" + x2 + ",0).");
+                }
+            }
+
+
+            let D = Discriminant();
+            realRoot(D);
+
+        </script>
+    </body>
+</html>
