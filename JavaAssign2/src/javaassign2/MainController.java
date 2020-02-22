@@ -59,8 +59,8 @@ public class MainController implements Initializable {
     //method to clear everything in textarea and textfield
     private void onClrClicked() {
         area.clear();
-        field1.clear();
-        field2.clear();
+        txtfield.clear();
+        txtfield1.clear();
     }
 
     private class CalHandler implements EventHandler<ActionEvent> {
