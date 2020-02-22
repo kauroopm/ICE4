@@ -48,27 +48,23 @@ public class MainController implements Initializable {
         btnClr.setOnAction(new ClrHandler());
     }
 
-    private void onCalculateClicked() {
+    private void onCalClicked() {
         int get1 = Integer.parseInt(field1.getText());
         int get2 = Integer.parseInt(field2.getText());
 
-        int i;
+        int i = 0;
         try {
-           // i = Integer.parseInt( );
-            //label.setText("");
+            //i = Integer.parseInt();
         } catch (NumberFormatException e) {
-            //label.setText("Invalid Number entered , please try again");
             Alert alert = new Alert(Alert.AlertType.ERROR, "Invaid input entered, please try again!!"); // Msg to display
-            //Optional<ButtonType> result = alert.showAndWait();
             alert.showAndWait();
-            // Action to perform when OK is clicked goes here
             return;
         }
-        BigDecimal roop = Calc.calculatePi(get1,get2);
+        BigDecimal roop = Calc.calculatePi(get1 , get2);
         area.setText(" " + roop);
     }
 
-    private void onClearClicked() {
+    private void onClrClicked() {
         area.clear();
         field1.clear();
         field2.clear();
@@ -77,14 +73,14 @@ public class MainController implements Initializable {
     private class CalHandler implements EventHandler<ActionEvent> {
 
         public void handle(ActionEvent e) {
-            onCalculateClicked();// Call a method in the outer class
+            onCalClicked();// Call a method in the outer class
         }
     }
 
     private class ClrHandler implements EventHandler<ActionEvent> {
 
         public void handle(ActionEvent e) {
-            onClearClicked(); // Call a method in the outer class
+            onClrClicked(); // Call a method in the outer class
         }
     }
 }
