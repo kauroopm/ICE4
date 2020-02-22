@@ -6,11 +6,22 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title> Exercise 25 - Getting the key code </title>
+        <title> Exercise 25- Getting the key code </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div> Exercise 25 - Getting the key code </div>
+        <div> Exercise 25- Getting the key code </div>
+        <canvas id="container" tabindex="0" onkeydown="getKeyCode(event)" width="400" height="400">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <script>
+            window.onload = function(){
+                document.getElementById("container").focus();
+            };
+            function getKeyCode(event){
+                alert(event.KeyCode);
+            }
+        </script>
     </body>
 </html>

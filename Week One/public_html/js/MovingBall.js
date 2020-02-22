@@ -21,4 +21,4 @@ function MovingBall() {
         stopMoving();
     }
 }
-startMoving();                             
+startMoving();                  
