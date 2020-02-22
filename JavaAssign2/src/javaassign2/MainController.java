@@ -12,7 +12,6 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -25,37 +24,39 @@ import javafx.scene.control.TextField;
 public class MainController implements Initializable {
 
     @FXML
-    private Button btnCal;
+    private Button button;
     @FXML
-    private Button btnClr;
+    private Button button1;
     @FXML
-    private Label label1;
+    private Label toplbl;
     @FXML
-    private Label label2;
+    private Label sublbl;
     @FXML
-    private Label label3;
+    private Label sublbl1;
     @FXML
     private TextArea area;
     @FXML
-    private TextField field1;
+    private TextField txtfield;
     @FXML
-    private TextField field2;
+    private TextField txtfield1;
     Calculation Calc = new Calculation();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        btnCal.setOnAction(new CalHandler());
-        btnClr.setOnAction(new ClrHandler());
+        button.setOnAction(new CalHandler());
+        button1.setOnAction(new ClrHandler());
     }
 
+    //method to perform an action when Calculate button is clicked
     private void onCalClicked() {
-        int get1 = Integer.parseInt(field1.getText());
-        int get2 = Integer.parseInt(field2.getText());
+        int get1 = Integer.parseInt(txtfield.getText());
+        int get2 = Integer.parseInt(txtfield1.getText());
 
-        BigDecimal roop = Calc.calculatePi(get1, get2);
-        area.setText(" " + roop);
+        BigDecimal show = Calc.calculatePi(get1, get2);
+        area.setText(" " + show);
     }
 
+    //method to clear everything in textarea and textfield
     private void onClrClicked() {
         area.clear();
         field1.clear();
@@ -70,7 +71,7 @@ public class MainController implements Initializable {
     }
 
     private class ClrHandler implements EventHandler<ActionEvent> {
-
+      
         public void handle(ActionEvent e) {
             onClrClicked(); // Call a method in the outer class
         }
