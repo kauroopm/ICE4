@@ -43,12 +43,12 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        button.setOnAction(new CalHandler());
-        button1.setOnAction(new ClrHandler());
+        button.setOnAction(new CalculateHandler());
+        button1.setOnAction(new ClearHandler());
     }
 
     //method to perform an action when Calculate button is clicked
-    private void onCalClicked() {
+    private void onCalculateClicked() {
         int get1 = Integer.parseInt(txtfield.getText());
         int get2 = Integer.parseInt(txtfield1.getText());
 
@@ -57,23 +57,23 @@ public class MainController implements Initializable {
     }
 
     //method to clear everything in textarea and textfield
-    private void onClrClicked() {
+    private void onClearClicked() {
         area.clear();
         txtfield.clear();
         txtfield1.clear();
     }
 
-    private class CalHandler implements EventHandler<ActionEvent> {
+    private class CalculateHandler implements EventHandler<ActionEvent> {
 
         public void handle(ActionEvent e) {
-            onCalClicked();// Call a method in the outer class
+            onCalculateClicked();// Call a method in the outer class
         }
     }
 
-    private class ClrHandler implements EventHandler<ActionEvent> {
+    private class ClearHandler implements EventHandler<ActionEvent> {
       
         public void handle(ActionEvent e) {
-            onClrClicked(); // Call a method in the outer class
+            onClearClicked(); // Call a method in the outer class
         }
     }
 }
