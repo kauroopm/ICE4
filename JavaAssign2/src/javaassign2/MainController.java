@@ -38,24 +38,34 @@ public class MainController implements Initializable {
     private TextField field1;
     @FXML
     private TextField field2;
-
+    Calculation Calc = new Calculation();
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         btnCal.setOnAction(new CalHandler());
         btnClr.setOnAction(new ClrHandler());
     }
 
+    private void onCalculateClicked() {
+        Calc.calculatePi(200, 500);
+    }
+
+    private void onClearClicked() {
+        area.clear();
+        field1.clear();
+        field2.clear();
+    }
+
     private class CalHandler implements EventHandler<ActionEvent> {
 
         public void handle(ActionEvent e) {
-            // Call a method in the outer class
+            onCalculateClicked();// Call a method in the outer class
         }
     }
 
     private class ClrHandler implements EventHandler<ActionEvent> {
 
         public void handle(ActionEvent e) {
-            // Call a method in the outer class
+            onClearClicked(); // Call a method in the outer class
         }
     }
 }
