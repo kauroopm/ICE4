@@ -5,12 +5,14 @@
  */
 package javaassign2;
 
+import java.math.BigDecimal;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -39,6 +41,7 @@ public class MainController implements Initializable {
     @FXML
     private TextField field2;
     Calculation Calc = new Calculation();
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         btnCal.setOnAction(new CalHandler());
@@ -46,7 +49,23 @@ public class MainController implements Initializable {
     }
 
     private void onCalculateClicked() {
-        Calc.calculatePi(200, 500);
+        int get1 = Integer.parseInt(field1.getText());
+        int get2 = Integer.parseInt(field2.getText());
+
+        int i;
+        try {
+           // i = Integer.parseInt( );
+            //label.setText("");
+        } catch (NumberFormatException e) {
+            //label.setText("Invalid Number entered , please try again");
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Invaid input entered, please try again!!"); // Msg to display
+            //Optional<ButtonType> result = alert.showAndWait();
+            alert.showAndWait();
+            // Action to perform when OK is clicked goes here
+            return;
+        }
+        BigDecimal roop = Calc.calculatePi(get1,get2);
+        area.setText(" " + roop);
     }
 
     private void onClearClicked() {
