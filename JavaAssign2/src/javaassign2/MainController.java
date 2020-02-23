@@ -53,19 +53,14 @@ public class MainController implements Initializable {
     private void onCalculateClicked() {
         String get1 = txtfield.getText();
         String get2 = txtfield1.getText();
-        
+
         int handle;
         int handle1;
-         try {
+        try {
             handle = Integer.parseInt(get1);
             handle1 = Integer.parseInt(get2);
-            //label.setText("");
         } catch (NumberFormatException e) {
-            sublbl2.setText("Invalid Number entered , please try again");
-            //Alert alert = new Alert(AlertType.ERROR, "Invaid input entered, please try again!!"); // Msg to display
-            //Optional<ButtonType> result = alert.showAndWait();
-            //alert.showAndWait();
-            // Action to perform when OK is clicked goes here
+            sublbl2.setText("Invalid input entered , please enter valid input");
             return;
         }
         BigDecimal show = Calc.calculatePi(handle, handle1);
@@ -77,6 +72,7 @@ public class MainController implements Initializable {
         area.clear();
         txtfield.clear();
         txtfield1.clear();
+        sublbl2.setText(" ");
     }
 
     private class CalculateHandler implements EventHandler<ActionEvent> {
