@@ -40,7 +40,7 @@
             <Font name="Calibri Bold Italic" size="20.0" />
          </font>
       </Label>
-      <ImageView fitHeight="514.0" fitWidth="605.0" layoutX="85.0" layoutY="13.0" opacity="0.06" pickOnBounds="true" preserveRatio="true">
+      <ImageView disable="true" fitHeight="514.0" fitWidth="605.0" layoutX="54.0" layoutY="12.0" opacity="0.06">
          <image>
             <Image url="@../Pi.jpg" />
          </image>
