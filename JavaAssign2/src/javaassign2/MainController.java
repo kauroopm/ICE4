@@ -34,6 +34,8 @@ public class MainController implements Initializable {
     @FXML
     private Label sublbl1;
     @FXML
+    private Label sublbl2;
+    @FXML
     private TextArea area;
     @FXML
     private TextField txtfield;
@@ -49,10 +51,24 @@ public class MainController implements Initializable {
 
     //method to perform an action when Calculate button is clicked
     private void onCalculateClicked() {
-        int get1 = Integer.parseInt(txtfield.getText());
-        int get2 = Integer.parseInt(txtfield1.getText());
-
-        BigDecimal show = Calc.calculatePi(get1, get2);
+        String get1 = txtfield.getText();
+        String get2 = txtfield1.getText();
+        
+        int handle;
+        int handle1;
+         try {
+            handle = Integer.parseInt(get1);
+            handle1 = Integer.parseInt(get2);
+            //label.setText("");
+        } catch (NumberFormatException e) {
+            sublbl2.setText("Invalid Number entered , please try again");
+            //Alert alert = new Alert(AlertType.ERROR, "Invaid input entered, please try again!!"); // Msg to display
+            //Optional<ButtonType> result = alert.showAndWait();
+            //alert.showAndWait();
+            // Action to perform when OK is clicked goes here
+            return;
+        }
+        BigDecimal show = Calc.calculatePi(handle, handle1);
         area.setText(" " + show);
     }
 
@@ -71,7 +87,7 @@ public class MainController implements Initializable {
     }
 
     private class ClearHandler implements EventHandler<ActionEvent> {
-      
+
         public void handle(ActionEvent e) {
             onClearClicked(); // Call a method in the outer class
         }

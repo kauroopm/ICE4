@@ -32,7 +32,7 @@ public class Calculation {
         for (int count = 0; count < iterations; count++) {
             // Calculate and add the next term in the series.
             // The sign of each new term alternates.
-            BigDecimal term = num1.divide(pow5.multiply(oddNum), iterations, RoundingMode.HALF_UP);
+            BigDecimal term = num1.divide(pow5.multiply(oddNum), precision, RoundingMode.HALF_UP);
             BigDecimal term1 = num2.divide(pow239.multiply(oddNum), precision, RoundingMode.HALF_UP);
             BigDecimal nextTerm = term.subtract(term1);
             result = result.add(sign.multiply(nextTerm));
