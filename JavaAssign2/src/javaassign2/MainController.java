@@ -49,13 +49,15 @@ public class MainController implements Initializable {
         button1.setOnAction(new ClearHandler());
     }
 
-    //method to perform an action when Calculate button is clicked
+    //method to display pi calculation in textarea
     private void onCalculateClicked() {
         String get1 = txtfield.getText();
         String get2 = txtfield1.getText();
 
         int handle;
         int handle1;
+
+        //try and catch block for Exception Handling 
         try {
             handle = Integer.parseInt(get1);
             handle1 = Integer.parseInt(get2);
@@ -67,7 +69,7 @@ public class MainController implements Initializable {
         area.setText(" " + show);
     }
 
-    //method to clear everything in textarea and textfield
+    //method to clear everything in textarea and textfield and label when invalid statement occur
     private void onClearClicked() {
         area.clear();
         txtfield.clear();

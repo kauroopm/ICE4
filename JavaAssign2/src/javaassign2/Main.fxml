@@ -4,39 +4,46 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="526.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaassign2.MainController">
+<AnchorPane id="AnchorPane" prefHeight="538.0" prefWidth="691.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaassign2.MainController">
     <children>
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <TextField fx:id="txtfield" layoutX="344.0" layoutY="61.0" />
-      <TextField fx:id="txtfield1" layoutX="344.0" layoutY="108.0" />
-      <Button fx:id="button" layoutX="61.0" layoutY="455.0" mnemonicParsing="false" text="Calculate" textFill="#f71919" wrapText="true">
+      <TextField fx:id="txtfield" layoutX="394.0" layoutY="95.0" />
+      <TextField fx:id="txtfield1" layoutX="394.0" layoutY="150.0" />
+      <Button fx:id="button" layoutX="119.0" layoutY="493.0" mnemonicParsing="false" text="Calculate" textFill="#f71919" wrapText="true">
          <font>
             <Font name="Constantia Bold" size="17.0" />
          </font></Button>
-      <Button fx:id="button1" layoutX="459.0" layoutY="455.0" mnemonicParsing="false" text="Clear" textFill="#f71919" wrapText="true">
+      <Button fx:id="button1" layoutX="484.0" layoutY="493.0" mnemonicParsing="false" text="Clear" textFill="#f71919" wrapText="true">
          <font>
             <Font name="Constantia Bold" size="17.0" />
          </font></Button>
-      <TextArea fx:id="area" layoutX="34.0" layoutY="155.0" prefHeight="221.0" prefWidth="546.0" wrapText="true" />
-      <Label fx:id="sublbl1" layoutX="89.0" layoutY="108.0" prefHeight="25.0" prefWidth="194.0" text="Enter the number of precision" textFill="#072ff5" wrapText="true">
+      <TextArea fx:id="area" layoutX="71.0" layoutY="208.0" prefHeight="221.0" prefWidth="546.0" wrapText="true" />
+      <Label fx:id="sublbl1" layoutX="138.0" layoutY="95.0" prefHeight="25.0" prefWidth="194.0" text="Enter the number of precision" textFill="#072ff5" wrapText="true">
          <font>
             <Font name="Arial Italic" size="14.0" />
          </font></Label>
-      <Label fx:id="sublbl" layoutX="89.0" layoutY="61.0" prefHeight="25.0" prefWidth="194.0" text="Enter the number of iterations" textFill="#072ff5" wrapText="true">
+      <Label fx:id="sublbl" layoutX="138.0" layoutY="150.0" prefHeight="25.0" prefWidth="194.0" text="Enter the number of iterations" textFill="#072ff5" wrapText="true">
          <font>
             <Font name="Arial Italic" size="14.0" />
          </font></Label>
-      <Label fx:id="toplbl" layoutX="41.0" layoutY="14.0" prefHeight="33.0" prefWidth="546.0" text="                Welcome to the PI Calculator" textAlignment="JUSTIFY" textFill="#ff0096" wrapText="true">
+      <Label fx:id="toplbl" layoutX="83.0" layoutY="36.0" prefHeight="33.0" prefWidth="546.0" text="                Welcome to the PI-Calculator" textAlignment="JUSTIFY" textFill="#ff0096" wrapText="true">
          <font>
             <Font name="Algerian" size="22.0" />
          </font></Label>
-      <Label fx:id="sublbl2" layoutX="38.0" layoutY="395.0" prefHeight="45.0" prefWidth="546.0" textAlignment="CENTER" textFill="RED">
+      <Label fx:id="sublbl2" layoutX="71.0" layoutY="442.0" prefHeight="45.0" prefWidth="546.0" textAlignment="RIGHT" textFill="RED">
          <font>
             <Font name="Calibri Bold Italic" size="20.0" />
          </font>
       </Label>
+      <ImageView fitHeight="514.0" fitWidth="605.0" layoutX="85.0" layoutY="13.0" opacity="0.06" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pi.jpg" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>
