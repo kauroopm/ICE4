@@ -11,7 +11,6 @@
 
 <AnchorPane id="AnchorPane" prefHeight="538.0" prefWidth="691.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaassign2.MainController">
     <children>
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
       <TextField fx:id="txtfield" layoutX="394.0" layoutY="95.0" />
       <TextField fx:id="txtfield1" layoutX="394.0" layoutY="150.0" />
       <Button fx:id="button" layoutX="119.0" layoutY="493.0" mnemonicParsing="false" text="Calculate" textFill="#f71919" wrapText="true">
@@ -40,7 +39,7 @@
             <Font name="Calibri Bold Italic" size="20.0" />
          </font>
       </Label>
-      <ImageView disable="true" fitHeight="514.0" fitWidth="605.0" layoutX="54.0" layoutY="12.0" opacity="0.06">
+      <ImageView disable="true" fitHeight="514.0" fitWidth="605.0" layoutX="42.0" layoutY="14.0" opacity="0.06">
          <image>
             <Image url="@../Pi.jpg" />
          </image>
