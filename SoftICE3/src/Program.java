@@ -19,7 +19,6 @@ public class Program {
       
         System.out.printf("The payCheque of Employee is: %.2f\n " ,emp.calculatePay());
         System.out.printf("The payCheque of Manager is: %.2f\n " ,man.calculatePay());
-        System.out.println("");
     }
     
 }
