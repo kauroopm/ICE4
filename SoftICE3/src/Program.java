@@ -17,8 +17,8 @@ public class Program {
      Employee emp = new Employee("Roop", 23.6, 8.5);
      Manager man = new Manager("Ruban", 45.3, 3.8, 26.4);
      
-        System.out.println("The payCheque of Employee is: " +emp.calculatePay());
-        System.out.println("The payCheque of Manager is: " +man.calculatePay());
+        System.out.printf("The payCheque of Employee is: %.2f\n " ,emp.calculatePay());
+        System.out.printf("The payCheque of Manager is: %.2f\n " ,man.calculatePay());
     }
     
 }
