@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <Button fx:id="btnOK" layoutX="168.0" layoutY="219.0" mnemonicParsing="false" text="OK" />
+      <TextField fx:id="text1" layoutX="110.0" layoutY="76.0" />
+      <Button fx:id="btnOpenSesame" layoutX="140.0" layoutY="299.0" mnemonicParsing="false" text="Open Sesame" />
+   </children>
+</AnchorPane>
