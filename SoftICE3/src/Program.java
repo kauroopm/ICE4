@@ -16,9 +16,10 @@ public class Program {
     public static void main(String[] args) {
      Employee emp = new Employee("Roop", 23.6, 8.5);
      Manager man = new Manager("Ruban", 45.3, 3.8, 26.4);
-     
+      
         System.out.printf("The payCheque of Employee is: %.2f\n " ,emp.calculatePay());
         System.out.printf("The payCheque of Manager is: %.2f\n " ,man.calculatePay());
+        System.out.println("");
     }
     
 }
