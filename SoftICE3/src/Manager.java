@@ -17,8 +17,12 @@ public class Manager extends Employee {
         _bonus = bonus;
     }
 
+    public String getname() {
+        return _name;
+    }
+
     @Override
     protected double calculatePay() {
-        return ((_numHours * _wage) + _bonus);
+        return (super.calculatePay() + _bonus);
     }
 }

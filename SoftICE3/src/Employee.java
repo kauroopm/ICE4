@@ -9,15 +9,21 @@
  * @author kauro
  */
 public class Employee {
+
     protected String _name;
     protected double _wage;
     protected double _numHours;
-    
-    public Employee(String name, double wage, double numHours){
+
+    public Employee(String name, double wage, double numHours) {
         _name = name;
         _wage = wage;
         _numHours = numHours;
     }
+
+    public String getname() {
+        return _name;
+    }
+
     protected double calculatePay() {
         return (_numHours * _wage);
     }
