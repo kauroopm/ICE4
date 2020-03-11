@@ -36,6 +36,10 @@ header {
     color: #8e8e8e;
     padding-right: 30px;
 }
+.menu :hover{
+    color: burlywood;
+    font-size: 25px;
+}
 #search, input[type=search] {
     width: 200px;
     background-color: #f5f7fa;
@@ -83,6 +87,10 @@ header {
 #feature-section {
     padding-top: 100px;
 }
+#showToDoList :hover {
+    padding: 5px;
+    background-color: antiquewhite;
+}
 .feature-section-title {
     width: 70%;
     text-align: center;
@@ -106,6 +114,9 @@ header {
 .feature-content .col-3 {
     padding: 10px;
     width: 30%;
+}
+.feature-content .col-3 :hover {
+    width: 105%;
 }
 .col-2 {
     float: left;

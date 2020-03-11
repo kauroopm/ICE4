@@ -41,3 +41,18 @@ function getTaskDetails(taskName){
     var t = TaskData.find(d => taskName.includes(d.name));
     return t;
 }
+
+//Adding TaskData Details in the home page
+function displayDataInHomePage() {
+    var i;
+    var tasksName = "<tr><th> Tasks Number and Task creation Date</th><th>Status</th></tr>";
+    var temp = TaskData.map(d => "<tr><td>"+d.name+" : created on - "+d.date+"</td><td align='center'>Completed: "+d.completed+"</td></tr>");
+    for(i = 0; i<temp.length; i++)
+    {
+        tasksName += temp[i];
+    }
+    var yesFilter = TaskData.filter(d => (d.completed === "Yes"));
+    var noFilter = TaskData.filter(d => (d.completed === "No"));
+    tasksName += "<tr><td>Total Tasks Completed: "+yesFilter.length+"</td><td>Tasks Remaining to Complete: "+noFilter.length+"</td></tr>";
+    return tasksName;
+}

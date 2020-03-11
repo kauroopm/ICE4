@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Work Plan Pvt Ltd</title>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <script src="js/db.js"></script>
     </head>
 <body>
     <header>
@@ -47,6 +48,15 @@
             </div>
         </div>
         <div id="feature-section">
+            <h1 class="feature-section-title"> ToDoList with current Tasks and Status:</h1>
+            <table id="showToDoList" class="feature-section-title" border="5"></table>
+            <script>
+                console.log(displayDataInHomePage());
+                var tempData = displayDataInHomePage();
+                console.log(tempData);
+                document.getElementById("showToDoList").innerHTML = tempData;
+            </script>
+            <br><br>
             <h1 class="feature-section-title"> Its a amazing website brought to you for tracking your work status. Features are:</h1>
             <div class="feature-content">
                 <div class="col-3">
