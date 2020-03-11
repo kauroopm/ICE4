@@ -8,19 +8,17 @@
  *
  * @author kauro
  */
-public class Manager extends Employee {
+public class SalesAssociate extends Employee {
 
-    protected double _bonus;
     protected double _vacPay;
 
-    public Manager(String name, double wage, double numHours, double bonus, double vacPay) {
+    public SalesAssociate(String name, double wage, double numHours, double vacPay) {
         super(name, wage, numHours);
-        _bonus = bonus;
         _vacPay = vacPay;
     }
 
     @Override
     protected double calculatePay() {
-        return (super.calculatePay() +_vacPay + _bonus);
+        return (super.calculatePay() + _vacPay);
     }
 }
